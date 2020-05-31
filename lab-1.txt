@@ -1,0 +1,22 @@
+User_Personal
+-------------
+
+Given Table:
+-----------
+  UserId     U_email               Fname     Lname    City     State     Zip 
+   MA12     alex@ymail.com         Alex      Jones   Houston   Texas    75001
+   PO45     emma.john@gmail.com    Emma      Stone   Albany    NewYork  10008
+   LA33     victoria@yahoo.com	   Victoria  Aurora  Istanbul  Turkey   34000
+
+Progression 1:
+--------------
+Yes, the given table is in 1NF.
+It is also in 2NF, no Parital dependency
+
+Progression 2:
+--------------
+There is a transitive dependency (USERID--->CITY-->STATE-->ZIP)
+
+1.CREATE TABLE USER_PERSONAL(USERID VARCHAR(10),U_EMAIL VARCHAR(30),FNAME CHAR(10),LNAME CHAR(10), CITY CHAR(10));
+
+2.CREATE TABLE CITYS(CITY CHAR(10),STATE CHAR(10),ZIP INT);	
